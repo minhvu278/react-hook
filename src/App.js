@@ -1,15 +1,16 @@
-import Content from "./components/Content";
 import './App.css'
 import {useContext} from "react";
-import {ThemeContext} from "./components/ThemeContext";
+import {StoreContext} from "./components/store";
 
 function App() {
-    const context = useContext(ThemeContext)
+
+    const [state, dispatch] = useContext(StoreContext)
+
+    console.log(state)
 
     return (
         <div style={{padding: 20}}>
-            <button onClick={context.toggleTheme}>Toggle</button>
-            <Content/>
+            <h1>HEllo bae</h1>
         </div>
     );
 }
